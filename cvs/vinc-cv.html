@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Kipngetich · CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-1: #0a0a0a;
+            --bg-2: #111111;
+            --line-1: rgba(255, 255, 255, 0.07);
+            --line-2: rgba(255, 255, 255, 0.14);
+            --line-3: rgba(255, 255, 255, 0.299);
+            --ink-1: #ffffff;
+            --ink-2: #d4d4d4;
+            --ink-4: #737373;
+            --font-sans: 'Poppins', system-ui, -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
+            --page-max: 1040px;
+            --page-pad: 40px;
+        }
+
+        body {
+            background-color: var(--bg);
+            font-family: var(--font-sans);
+            color: var(--ink-2);
+            line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            padding-block: 32px;
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .site-wrapper {
+            max-width: var(--page-max);
+            width: 100%;
+            margin-inline: auto;
+            background: var(--bg);
+            border: 1px solid var(--line-3);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .site-header {
+            padding: 28px 24px;
+            background: var(--bg-1);
+            border-bottom: 1px solid var(--line-1);
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            padding: 16px 24px;
+            background: var(--bg-1);
+            border-bottom: 1px solid var(--line-1);
+        }
+
+        .nav-menu a {
+            display: inline-block;
+            padding: 8px 18px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-2);
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-menu a:hover {
+            background: var(--bg-2);
+            border-color: var(--line-1);
+            color: var(--ink-1);
+        }
+
+        .nav-menu a.active {
+            background: var(--bg-2);
+            border-color: var(--line-2);
+            color: var(--ink-1);
+            font-weight: 600;
+        }
+
+        .content {
+            padding: var(--page-pad);
+            background: var(--bg);
+        }
+
+        .home-photo-block {
+            margin-bottom: 20px;
+        }
+
+        .home-photo-block img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--line-2);
+            margin-bottom: 18px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--line-1);
+            margin: 24px 0 28px 0;
+        }
+
+        .home-text p {
+            font-size: 15px;
+            color: var(--ink-2);
+            margin-bottom: 18px;
+            line-height: 1.7;
+        }
+
+        .home-text strong {
+            color: var(--ink-1);
+            font-weight: 600;
+        }
+
+        .home-text .highlight {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+
+        .home-footer {
+            font-size: 13px;
+            color: var(--ink-4);
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--ink-4);
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            margin-bottom: 20px;
+        }
+
+        .cv-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+            font-size: 14px;
+            border: 1px solid #09f309;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cv-table th {
+            background-color: #7fc9ff;
+            color: #0a0a0a;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 14px 12px;
+            text-align: left;
+            border-bottom: 1px solid #09f309;
+            border-right: 1px solid #09f309;
+        }
+
+        .cv-table th:last-child {
+            border-right: none;
+        }
+
+        .cv-table td {
+            padding: 14px 12px;
+            border: 1px solid #09f309;
+            color: var(--ink-2);
+            vertical-align: top;
+            background: var(--bg-1);
+        }
+
+        .cv-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cv-table td:first-child {
+            font-weight: 500;
+            color: var(--ink-1);
+            white-space: nowrap;
+        }
+
+        .cv-table td:last-child {
+            color: #d4d4d4;
+        }
+
+        .experience-note {
+            margin-top: 22px;
+            font-size: 13px;
+            color: var(--ink-4);
+            border-left: 2px solid #09f309;
+            border-right: 2px solid #09f309;
+            border-radius: 0 12px 0 12px;
+            padding-left: 16px;
+        }
+
+        .contact-card {
+            background: var(--bg-1);
+            border: 1px solid var(--line-1);
+            border-radius: 14px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 6px 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--line-1);
+            font-size: 15px;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-label {
+            width: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--ink-4);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+        }
+
+        .contact-value {
+            color: var(--ink-1);
+            font-weight: 500;
+            word-break: break-word;
+        }
+
+        .contact-value a {
+            color: var(--ink-1);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--ink-4);
+            transition: border-color 0.15s;
+        }
+
+        .contact-value a:hover {
+            border-bottom-color: #09f309;
+        }
+
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-2);
+            border: 1px solid var(--line-2);
+            color: var(--ink-1);
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            margin-top: 18px;
+            transition: all 0.2s ease;
+        }
+
+        .email-btn:hover {
+            background: #1a1a1a;
+            border-color: #09f309;
+            transform: translateY(-2px);
+        }
+
+        .email-form {
+            background: var(--bg-1);
+            border: 1px solid var(--line-1);
+            border-radius: 14px;
+            padding: 28px 24px;
+            margin-top: 20px;
+        }
+
+        .email-form p {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-1);
+            margin-bottom: 6px;
+        }
+
+        .email-form input:not([type="checkbox"]),
+        .email-form textarea {
+            display: block;
+            width: 100%;
+            font-family: var(--font-sans);
+            font-size: 14px;
+            color: var(--ink-1);
+            background: var(--bg-2);
+            border: 1px solid var(--line-2);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-bottom: 16px;
+            outline: none;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+
+        .email-form input:not([type="checkbox"]):focus,
+        .email-form textarea:focus {
+            border-color: #09f309;
+            box-shadow: 0 0 0 3px rgba(9, 243, 9, 0.12);
+        }
+
+        .email-form input::placeholder,
+        .email-form textarea::placeholder {
+            color: var(--ink-4);
+        }
+
+        .email-msg {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .email-copy-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .email-copy-row input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            margin: 0;
+            accent-color: #09f309;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .email-copy-row p {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--ink-2);
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .send-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-2);
+            border: 1px solid var(--line-2);
+            color: var(--ink-1);
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-family: var(--font-sans);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .send-btn:hover {
+            background: #1a1a1a;
+            border-color: #09f309;
+            transform: translateY(-2px);
+        }
+
+        .contact-hr {
+            margin: 32px 0 18px 0;
+        }
+
+        .contact-note {
+            font-size: 14px;
+            color: var(--ink-4);
+        }
+
+        .hobby-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 12px;
+            list-style: none;
+            padding-left: 0;
+            counter-reset: hobby-counter;
+        }
+
+        .hobby-item {
+            background: var(--bg-1);
+            border-left: 2px solid #09f309;
+            padding: 16px 20px 16px 48px;
+            border-radius: 0 12px 0;
+            font-size: 15px;
+            color: var(--ink-2);
+            position: relative;
+            counter-increment: hobby-counter;
+        }
+
+        .hobby-item::before {
+            content: counter(hobby-counter);
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: #09f309;
+            color: var(--bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .hobby-item strong {
+            color: var(--ink-1);
+            font-weight: 600;
+            display: block;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .hobby-details {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+            gap: 4px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hobby-details li {
+            color: var(--ink-2);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .site-footer {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 13px;
+            color: var(--ink-4);
+            border-top: 1px solid var(--line-1);
+        }
+
+        @media (max-width: 720px) {
+            body {
+                padding-block: 0;
+            }
+
+            .site-wrapper {
+                border-radius: 0;
+                border: none;
+            }
+
+            .content {
+                padding: 28px 20px;
+            }
+
+            .nav-menu {
+                padding: 12px 16px;
+                justify-content: center;
+            }
+
+            .cv-table th,
+            .cv-table td {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+
+            .contact-label {
+                width: 80px;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="site-wrapper">
+        <nav class="nav-menu">
+            <a href="#home" class="active" data-page="home">Home</a>
+            <a href="#experience" data-page="experience">Personal experience</a>
+            <a href="#contacts" data-page="contacts">Contacts</a>
+            <a href="#hobbies" data-page="hobbies">Hobbies</a>
+        </nav>
+
+        <div class="site-header">
+            <span class="site-title">Vincent Kipngetich</span>
+        </div>
+
+        <div class="content" id="pageContent">
+            <div id="homePage" class="page-section">
+                <div class="home-photo-block">
+                    <img src="/cvs/static/vinc-photo.jpg" alt="VK portrait"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22140%22 height=%22140%22 viewBox=%220 0 140 140%22%3E%3Ccircle cx=%2270%22 cy=%2270%22 r=%2268%22 fill=%22%23111%22 stroke=%22%23444%22 stroke-width=%222%22/%3E%3Ctext x=%2270%22 y=%2285%22 font-family=%22Poppins,sans-serif%22 font-size=%2242%22 fill=%22%23aaa%22 text-anchor=%22middle%22%3EVK%3C/text%3E%3C/svg%3E'">
+                </div>
+                <hr>
+
+                <div class="home-text">
+                    <p><strong>Vincent Kipngetich</strong> — Bachelor of Science in Information Technology, currently in
+                        my second year at a Kisii University. I'm a backend engineer with four years of hands-on
+                        experience, and I also build frontend interfaces (about five months into serious frontend work).
+                    </p>
+                    <p>I offer <span class="highlight">backend development</span>, API design, database architecture,
+                        automation, and networking solutions. I've shipped 12+ production projects for real users — from
+                        e‑commerce and streaming platforms to captive portals and database tools.</p>
+                    <p>My background is grounded in both formal education and self‑taught engineering. I studied at
+                        Ubora Boys High School (KCSE A‑) and Londiani Primary School. I enjoy solving practical
+                        problems, whether it's a backend pipline design or API profiling.</p>
+                    <p>After my course, I hope to deepen my expertise in distributed systems and contribute to
+                        large‑scale backend infrastructure — while continuing to build tools that make everyday tasks
+                        easier. I'm also passionate about mentoring upcoming developers in my community.</p>
+                </div>
+                <hr>
+            </div>
+
+            <div id="experiencePage" class="page-section" style="display: none;">
+                <h2 class="section-title">Personal Experience</h2>
+                <table class="cv-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Institutions attended</th>
+                            <th>Award given</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025 – present</td>
+                            <td>University (BSc. Information Technology)</td>
+                            <td>In progress — expected 2028</td>
+                        </tr>
+                        <tr>
+                            <td>2021 – 2024</td>
+                            <td>Ubora Boys High School</td>
+                            <td>KCSE A‑ (minus)</td>
+                        </tr>
+                        <tr>
+                            <td>2012 – 2021</td>
+                            <td>Londiani Primary School</td>
+                            <td>KCPE 316 marks</td>
+                        </tr>
+                        <tr>
+                            <td>2023 – present</td>
+                            <td>Self‑taught / Online engineering</td>
+                            <td>12+ production projects</td>
+                        </tr>
+                        <tr>
+                            <td>2024 – 2025</td>
+                            <td>Amazon Mechanical Turk (remote)</td>
+                            <td>Data annotation & quality (9+ months)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="experience-note">Additional skills: Django, FastAPI, Flask, Python, C, R, VB.Net,
+                    JavaScript, SQL, networking, CyberSecurity.</p>
+            </div>
+
+            <div id="contactsPage" class="page-section" style="display: none;">
+                <h2 class="section-title">Contacts</h2>
+                <div class="contact-card">
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value"><a
+                                href="mailto:vincentkipngetich479@gmail.com">vincentkipngetich479@gmail.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">
+                            <a href="tel:0740694312">
+                                +254 740 694 312
+                            </a>
+                        </span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">Njoro, Nakuru, Kenya</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Web</span>
+                        <span class="contact-value"><a href="https://lyxnexus.de5.net" target="_blank">LyxNexus</a>
+                            Hub</span>
+                    </div>
+                </div>
+
+                <a href="mailto:vincentkipngetich479@gmail.com" class="email-btn">
+                    Email Me
+                </a>
+
+                <div class="email-form">
+                    <p>Enter your name:</p>
+                    <input class="email-name" placeholder="name" />
+                    <p>Enter address*:</p>
+                    <input class="email-addr" type="email" placeholder="name@gmail.com" />
+                    <p>Enter Subject</p>
+                    <input class="email-subject" placeholder="Subject Matter" />
+                    <p>Enter Message*:</p>
+                    <textarea class="email-msg" placeholder="Explain briefly the message...."></textarea>
+
+                    <div class="email-copy-row">
+                        <input type="checkbox" id="email-copy" />
+                        <p><label for="email-copy">E-mail a copy of this message to your address</label></p>
+                    </div>
+
+                    <button class="send-btn" type="button">Send</button>
+                </div>
+
+                <hr class="contact-hr">
+                <p class="contact-note">Feel free to reach out me...</p>
+            </div>
+
+            <div id="hobbiesPage" class="page-section" style="display: none;">
+                <h2 class="section-title">Hobbies & interests</h2>
+                <ol class="hobby-list">
+                    <li class="hobby-item">
+                        <strong>Networking & hardware</strong>
+                        <ul class="hobby-details">
+                            <li>Building custom hotspots, captive portals and load balancers — always experimenting with
+                                new ways to stay connected.</li>
+                        </ul>
+                    </li>
+                    <li class="hobby-item">
+                        <strong>Data & automation</strong>
+                        <ul class="hobby-details">
+                            <li>I enjoy writing scripts that clean messy data and automate many stuff.</li>
+                            <li>R and Python are my go‑to tools for these projects.</li>
+                        </ul>
+                    </li>
+                    <li class="hobby-item">
+                        <strong>eFootball & gaming</strong>
+                        <ul class="hobby-details">
+                            <li>Big fan of Konami eFootball</li>
+                            <li>Built a hub for players to organise tournaments (LyMaK)</li>
+                        </ul>
+                    </li>
+                    <li class="hobby-item">
+                        <strong>Open source & mentoring</strong>
+                        <ul class="hobby-details">
+                            <li>Contributing to small open source tools</li>
+                            <li>Helping junior devs understand backend fundamentals</li>
+                        </ul>
+                    </li>
+                    <li class="hobby-item">
+                        <strong>Music & podcasts</strong>
+                        <ul class="hobby-details">
+                            <li>Lo‑fi music keeps me company during long coding sessions</li>
+                            <li>Tech podcasts help me stay updated on industry trends</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <p style="color: green;">&copy; 2026 Vincent Kipngetich. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        (function () {
+            const pages = {
+                home: document.getElementById('homePage'),
+                experience: document.getElementById('experiencePage'),
+                contacts: document.getElementById('contactsPage'),
+                hobbies: document.getElementById('hobbiesPage')
+            };
+
+            const navLinks = document.querySelectorAll('.nav-menu a');
+
+            function showPage(pageId) {
+                Object.values(pages).forEach(p => {
+                    if (p) p.style.display = 'none';
+                });
+                if (pages[pageId]) {
+                    pages[pageId].style.display = 'block';
+                }
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.page === pageId) {
+                        link.classList.add('active');
+                    }
+                });
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const page = this.dataset.page;
+                    if (page && pages[page]) {
+                        showPage(page);
+                    }
+                });
+            });
+
+            Object.keys(pages).forEach(key => {
+                if (key !== 'home' && pages[key]) {
+                    pages[key].style.display = 'none';
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page === 'home') link.classList.add('active');
+            });
+        })();
+    </script>
+</body>
+
+</html>
