@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Martin Mukiu</title>
+</head>
+
+<body style="background-color: rgb(124, 124, 216);">
+
+ <section>
+          <h1 align="center"><b><u>WELCOME</u></b></h1> 
+
+           <p>Thank you for visiting my page. Click the links below to navigate through my website.</p>
+ </section>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="contact me.html">Contact me</a></li>
+            </ul>
+        </nav>
+
+<hr>
+<footer>
+    <p>&copy; 2026 Martin mukiu. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
+                
