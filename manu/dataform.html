@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial;
+        }
+
+        .form {
+            background-color: white;
+            width: 60%;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 10px;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid green;
+        }
+
+        textarea {
+            width: 95%;
+            padding: 10px;
+            height: 180px;
+            border: 1px solid green;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form">
+
+        <h1>CONTACT ME</h1>
+
+        <form action="mailto:emanuelmanyange92@gmail.com" method="post" enctype="text/plain">
+
+            <table>
+
+                <tr>
+                    <td>Enter Your Name:</td>
+                    <td>
+                        <input type="text" name="Name" placeholder="Your full name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Enter Your Email:</td>
+                    <td>
+                        <input type="email" name="Email" placeholder="Your email" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Message Subject:</td>
+                    <td>
+                        <input type="text" name="Subject" placeholder="Message subject" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Enter Your Message:</td>
+                    <td>
+                        <textarea name="Message" placeholder="Write your message..." required></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" name="Copy">
+                        E-mail a copy of this message to your own address.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Send</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Emmanuel Otieno Manyange.</p>
+        <p>All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
